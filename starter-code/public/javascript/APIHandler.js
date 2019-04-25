@@ -20,14 +20,8 @@ class APIHandler {
   updateOneRegister (id, charValues) {
     //axios.put(`${this.BASE_URL}/characters/${id}`, charValues);
     console.log(id, charValues);
-    axios.patch(`${this.BASE_URL}/characters/${id}`)
-      .then(() => {
-        console.log('Criado com sucesso');        
-        document.getElementById('edit-character-form').reset();        
-      })
-      .catch((err) => {
-        console.log(err);        
-      })
+    axios.put(`${this.BASE_URL}/characters/${id}`, charValues);
+    
   }
 
   deleteOneRegister (id) {
